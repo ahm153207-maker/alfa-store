@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="ALFA Essentials — premium everyday clothing.">
+  <title>ALFA — Essentials 001</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">COMPLIMENTARY DELIVERY ON ORDERS OVER LE 2,000</div>
+  <header class="header">
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+    <a class="logo" href="#home"><span class="logo-symbol">Λ</span><span>ALFA</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#story">OUR STORY</a>
+    </nav>
+    <button class="bag-button" id="bagButton">BAG <span id="bagCount">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ALFA / ESSENTIALS 001</p>
+        <h1>THE ART OF<br><em>LESS.</em></h1>
+        <p>Everyday essentials, elevated.<br>Designed to move with you.</p>
+        <a href="#shop" class="light-button">SHOP THE COLLECTION <span>↗</span></a>
+      </div>
+      <div class="hero-bottom"><span>MINIMAL TODAY. TIMELESS TOMORROW.</span><span>01 — 04</span></div>
+    </section>
+
+    <section class="intro-strip"><span>LESS, BUT BETTER.</span><span class="strip-star">✳</span><span>MADE FOR EVERY DAY.</span><span class="strip-star">✳</span><span>ALFA ESSENTIALS.</span></section>
+
+    <section class="shop section" id="shop">
+      <div class="section-top">
+        <div><p class="eyebrow dark">THE FIRST DROP</p><h2>SHOP ESSENTIALS</h2></div>
+        <p class="section-description">Four pieces. Two timeless colors.<br>Find your everyday uniform.</p>
+      </div>
+      <div class="shop-tools">
+        <div class="filters">
+          <button class="filter active" data-filter="all">VIEW ALL <span>04</span></button>
+          <button class="filter" data-filter="tshirt">T-SHIRTS</button>
+          <button class="filter" data-filter="pants">PANTS</button>
+        </div>
+        <span class="sort-label">DROP 001 / 2026</span>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="campaign">
+      <div class="campaign-image"></div>
+      <div class="campaign-copy"><p class="eyebrow">THE ALFA STANDARD</p><h2>QUIET<br>CONFIDENCE.</h2><p>Thoughtful essentials. Premium feel.<br>No noise, just good design.</p><a href="#story" class="outline-button">DISCOVER ALFA ↗</a></div>
+    </section>
+
+    <section class="story section" id="story">
+      <p class="eyebrow dark">OUR PHILOSOPHY</p>
+      <h2>GOOD DESIGN<br>DOESN'T NEED<br>TO SHOUT.</h2>
+      <p>ALFA is built around the pieces you reach for most. Clean forms, considered details and a monochrome palette made to last beyond a season.</p>
+      <div class="values">
+        <div><span>01</span><b>PREMIUM FEEL</b><small>Fabric chosen with care.</small></div>
+        <div><span>02</span><b>MINIMAL DESIGN</b><small>Only what matters.</small></div>
+        <div><span>03</span><b>EVERYDAY WEAR</b><small>Made to be repeated.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#home"><span class="logo-symbol">Λ</span><span>ALFA</span></a>
+    <p>MINIMAL TODAY. TIMELESS TOMORROW.</p>
+    <div class="footer-bottom"><span>© 2026 ALFA. ALL RIGHTS RESERVED.</span><a href="mailto:hello@alfa.example">CONTACT ↗</a><span>ESSENTIALS 001</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="productBackdrop">
+    <section class="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="close-modal" id="closeProduct" aria-label="Close">×</button>
+      <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+      <div class="modal-info">
+        <p class="eyebrow dark">ALFA / ESSENTIALS 001</p>
+        <h2 id="modalName"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p class="modal-copy" id="modalDescription"></p>
+        <div class="option-block"><div class="option-heading">COLOR <span id="selectedColorName"></span></div><div class="swatches" id="swatches"></div></div>
+        <div class="option-block"><div class="option-heading">SIZE <button class="size-guide" id="sizeGuide">SIZE GUIDE +</button></div><div class="sizes" id="sizes"></div></div>
+        <p class="selection-error" id="selectionError"></p>
+        <button class="add-button" id="addToBag">ADD TO BAG — <span id="addPrice"></span></button>
+        <div class="product-perks"><span>✓ PREMIUM QUALITY</span><span>✓ EASY EXCHANGE</span></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="size-backdrop" id="sizeBackdrop"><div class="size-card"><button class="close-modal" id="closeSize">×</button><p class="eyebrow dark">FIND YOUR FIT</p><h3>SIZE GUIDE</h3><p>Sample guide only. Final measurements will be added after fitting the production samples.</p><table><tr><th>SIZE</th><th>CHEST</th><th>LENGTH</th></tr><tr><td>S</td><td>54 cm</td><td>70 cm</td></tr><tr><td>M</td><td>57 cm</td><td>72 cm</td></tr><tr><td>L</td><td>60 cm</td><td>74 cm</td></tr><tr><td>XL</td><td>63 cm</td><td>76 cm</td></tr></table></div></div>
+
+  <div class="drawer-shade" id="drawerShade"></div>
+  <aside class="bag-drawer" id="bagDrawer">
+    <div class="drawer-header"><h3>YOUR BAG <span id="drawerCount">(0)</span></h3><button id="closeBag" class="close-bag">×</button></div>
+    <div class="bag-lines" id="bagLines"><p class="empty-bag">Your bag is waiting for something good.</p></div>
+    <div class="bag-footer"><div class="subtotal"><span>SUBTOTAL</span><b id="subtotal">LE 0</b></div><p>Delivery fees are calculated when confirming your order.</p><button class="checkout-button" id="checkout">CONTINUE TO ORDER ↗</button></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
